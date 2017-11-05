@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>交換日記</title>
+    <style media="screen">
+    body{
+    background: red;
+    margin: 0;
+    padding: 0;
+    }
+      img{
+        position: fixed;
+        left: 45%;
+        height: 100vh;
+      }
+      #myDIV {
+        position: absolute;
+        left: 38%;
+        top: 30%;
+    margin: auto;
+    border: 1px solid yellow;
+    outline: blue solid 50px;
+    width: 300px;
+    height: 300px;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+    z-index: 100;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {outline-offset: 600px; outline-width:medium;}
+}
+
+pre{
+  text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: blue;
+    font-size: 20px;
+    background-color: green;
+    color: red;
+    font-family: serif;
+    font-weight: 600;
+}
+p{
+  position: relative;
+  left: 10%;
+  font-size: 50px;
+  color: yellow;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+    </style>
+  </head>
+  <body>
+    <img src="01.png">
+    <p>도희의 창작 요~리! ‘아보카도 후라이 파송송 소고기 샐러드’</p>
+<pre>1.아보카도, 방울토마토, 샐러드 야채를 그릇에 담는다.
+2.파를 올리브기름에 볶은 후에 그릇에 담는다.
+3.계란 후라이를 한 후에 그릇에 담는다.
+4.소고기를 올리브오일을 묻힌 후에 후추와 소금으로 간을 하고 요리용 와인에 넣고 재워둔다.
+5.후라이팬에 버터를 녹인 후 녹은 버터에 재워둔 소고기를 익힌 후에 그릇에 담는다.
+6.냠냠냠(계란 노른자 터쳐서 샐러드 소스랑 소고기에 찍어먹으면 너무 맛있다.
+볶은 파랑 고기랑 같이 먹는 것도 맛있다.)
+
++ 소스: 간장2 참기름2 식초1 설탕1 후추 다진마늘</pre>
+<div id="myDIV"></div>
+  </body>
+</html>
