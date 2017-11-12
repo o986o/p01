@@ -4,93 +4,115 @@
     <meta charset="utf-8">
     <title>交換日記</title>
     <style media="screen">
-    #text {
-  -webkit-animation: a1 7s infinite; /* Chrome, Safari, Opera */
-  animation: a1 7s infinite;
+    body{
+      padding:0;
+      margin:0;
+      background: url(img/IMG_9925.JPG);
+      background-size: 200px;
+      background-repeat: repeat;
+    }
+    .thumbnail-wrappper {
+  width: 25%;
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes a1 {
-  50% {font: 150px bold;}
+.thumbnail {
+  position: relative;
+  padding-top: 100%;  /* 1:1 ratio */
+  overflow: hidden;
 }
-    body{
-      margin: 0;
-      padding: 0;
-    }
-    #div1 {
-  position: fixed;
-  top: -8.5%;
-  left: 40%;
-  margin: auto;
-  height: 150px;
-  width: 250px;
-  padding: 10px;
-  /* Chrome, Safari, Opera */
-  -webkit-perspective: 110px;
-  -webkit-animation: mymove 1s infinite;
-  /* Standard syntax */
-  perspective: 110px;
-  animation: mymove 1s infinite;
-  z-index: 50;
+
+.thumbnail .centered {
+  position: relative;
+  top: -2000px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(50%,0%);
+  -ms-transform: translate(50%,0%);
+  transform: translate(50%,0%);
+}
+
+.thumbnail .centered img {
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width: 50%;
+  height: auto;
+  -webkit-transform: translate(-50%,-0%);
+  -ms-transform: translate(-50%,-0%);
+  transform: translate(-50%,-0%);
+}
+#myDIV {
+    position: fixed;
+    top: -33%;
+    left:23%;
+    font-size: 200px;
+    font-family: futura;
+    font-weight: 600;
+    z-index: 100;
+    color: yellow;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
 }
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
-  50% {-webkit-perspective-origin: 0px 50%;}
-}
-
-#div2 {
-  padding:10px;
-  position: fixed;
-  border: 3px solid black;
-  background-color: blue;
-  -webkit-transform: rotateX(45deg); /* Chrome, Safari, Opera */
-  transform: rotateX(45deg);
-  font-family: sans-serif;
-  font-weight:bolder;
-  font-size: 20px;
-  color: red;
-  z-index: 50;
-}
-img{
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: -100;
-}
-.ani{
-  position: absolute;
-  color: yellow;
-  text-shadow: -2px 0 red, 0 2px red,
-  2px 0 red, 0 -2px red;
-  font-family: futura;
-  font-weight: bolder;
-  z-index: 100;
-}
-.no{
-  position: absolute;
-  word-break:break-all;
-  z-index: 0;
-}
-.img01{
-  position: absolute;
-  top:50%;
-  left: 15%;
-  width: 400px;
-  height: auto;
-  z-index: 90;
+    50% {-webkit-transform: rotate(360deg);}
 }
     </style>
   </head>
   <body>
-    <div id="div1">
-  <div id="div2">으아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아아악</div>
-</div>
-  <div id="text">
-<p class="ani">Screammmmming</p></div>
-<p class="no">Screammmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmming</p>
-</div>
-    <img class="img01"src="timetable.png">
-    <img src="02.png">
+    <div class="thumbnail-wrapper">
+      <div class="thumbnail">
+        <div class="centered">
+        <img src="img/IMG_9855.jpg">
+        <img src="img/IMG_9866.jpg">
+        <img src="img/IMG_9870.jpg">
+        <img src="img/IMG_9883.jpg">
+        <img src="img/IMG_9885.jpg">
+        <img src="img/IMG_9897.jpg">
+        <img src="img/IMG_9898.jpg">
+        <img src="img/IMG_9899.jpg">
+        <img src="img/IMG_9900.jpg">
+        <img src="img/IMG_9901.jpg">
+        <img src="img/IMG_9902.jpg">
+        <img src="img/IMG_9903.jpg">
+        <img src="img/IMG_9904.jpg">
+        <img src="img/IMG_9905.jpg">
+        <img src="img/IMG_9913.jpg">
+        <img src="img/IMG_9914.jpg">
+        <img src="img/IMG_9915.jpg">
+        <img src="img/IMG_9916.jpg">
+        <img src="img/IMG_9917.jpg">
+        <img src="img/IMG_9918.jpg">
+        <img src="img/IMG_9919.jpg">
+        <img src="img/IMG_9920.jpg">
+        <img src="img/IMG_9921.jpg">
+        <img src="img/IMG_9922.jpg">
+        <img src="img/IMG_9923.jpg">
+        <img src="img/IMG_9924.jpg">
+        <img src="img/IMG_9925.jpg">
+        <img src="img/IMG_9926.jpg">
+        <img src="img/IMG_9927.jpg">
+        <img src="img/IMG_9928.jpg">
+        <img src="img/IMG_9929.jpg">
+        <img src="img/IMG_9930.jpg">
+        <img src="img/IMG_9931.jpg">
+        <img src="img/IMG_9932.jpg">
+        <img src="img/IMG_9933.jpg">
+        <img src="img/IMG_9934.jpg">
+        <img src="img/IMG_9935.jpg">
+        <img src="img/IMG_9936.jpg">
+        <img src="img/IMG_9939.jpg">
+        <img src="img/IMG_9942.jpg">
+        <img src="img/IMG_9943.jpg">
+        <img src="img/IMG_9944.jpg">
+        <img src="img/IMG_9945.jpg">
+      </div>
+      </div>
+    </div>
+    <div id="myDIV">
+    <p>PARTY!<br> PARTY!<br> PARTY!<br></p>
+  </div>
   </body>
 </html>
