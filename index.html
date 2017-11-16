@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>交換日記 </title>
-      <meta charset="utf-8">
-  <script src="p5.min.js"></script>
-  <script src="addons/p5.dom.min.js"></script>
-  <script src="addons/p5.sound.min.js"></script>
-  <script src="sketch.js"></script>
-<style media="screen">
-  body{
-    margin: 5;
-    padding: 0;
-  }
-  p{
-    position: fixed;
-    z-index: 100;
-  }
-</style>
+  <head>
+    <meta charset="utf-8">
+    <title>交換日記</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
 
-</head>
+  <body>
 
-<body>
-<p>Type from 1 to 7 & change mouse position up and down.<br> today I am entirely burned out.<br>I do not want to make something.</p>
-</body>
+    <div class="navigation">
+      <ul>
+        <li><a class="to01" href="#i01">p01</a></li>
+        <li><a class="to02" href="#i02">p02</a></li>
+        <li><a class="to03" href="#i03">p03</a></li>
+        <li><a class="to04" href="#i04">p04</a></li>
+        <li><a class="to05" href="#i05">p05</a></li>
+      </ul>
+      <p class="openingText">OPEN</p>
+      <p class="closingText">CLOSE</p>
+
+    </div>
+
+    <div class="wrapper">
+      <!-- wrapper는 컨테이너의 역할을 한다. -->
+      <div id="i01"><img src="img/01.png"></div>
+      <div id="i02"><img src="img/02.png"></div>
+      <div id="i03"><img src="img/03.png"></div>
+      <div id="i04"><img src="img/02.png"></div>
+      <div id="i05"><img src="img/01.png"></div>
+
+      <div class="line"></div>
+    </div>
+  </body>
 
 </html>
