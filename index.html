@@ -1,52 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
+
+<head>
     <title>交換日記</title>
-  </head>
-  <style>
-  body {
-margin: 0;
-background: #000;
-}
-video {
-position: fixed;
-top: 50%;
-left: 50%;
-min-width: 100%;
-min-height: 100%;
-width: auto;
-height: auto;
-z-index: -100;
-transform: translateX(-50%) translateY(-50%);
-background: url('IMG_8364.mp4') no-repeat;
-background-size: cover;
-transition: 1s opacity;
-}
-p{
-position: fixed;
-top: -10%;
-left: 0%;
-margin: 120px;
-color: yellow;
-text-shadow: -5px 0 red, 0 5px red,
-5px 0 red, 0 -5px red;
-text-align: center;
-font-family: HeadLineA;
-font-weight:border;
-font-size: 115px;
-line-height: 155px;
-z-index: 0;
-word-break: break-all;
-}
+      <meta charset="utf-8">
+  <script src="p5.min.js"></script>
+  <script src="addons/p5.dom.min.js"></script>
+  <script src="addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+  <style media="screen">
+
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    iframe{
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      z-index: -100;
+    }
+    p{
+      position: absolute;
+      top: 10%;
+      left: 0%;
+      font-size: 100px;
+      font-family: futura;
+    }
   </style>
-  <body>
-    <video poster="01.mp4" id="bgvid" playsinline autoplay muted loop>
-<source src="01.mp4" type="video/webm">
-<source src="01.mp4" type="video/mp4">
-</video>
-<p>잘먹고 잘살고 있으니까 걱정말아요!ㅎㅂㅎ<br>
-  최근들어 걱정어린 안부연락을 많이 받아서요.</p>
-  </body>
-  </body>
+</head>
+
+<body>
+  <iframe src="https://www.youtube.com/embed/0-0OiiJSyyw?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<p>test/test/test</p>
+</body>
+
 </html>
