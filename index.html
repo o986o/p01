@@ -3,58 +3,115 @@
   <head>
     <meta charset="utf-8">
     <title>交換日記</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <style media="screen">
-      body{
-        margin: 0;
-        padding: 0;
-      }
-      p{
+    body{
+      margin:0;
+      padding: 0;
+    }
+      #VHSS{
         position: fixed;
-        top: -5%;
-        left:10%;
-        font-size: 150px;
-        font-family: futura;
-        font-weight: 300;
-        color: red;
-        text-align: center;
+        top: 7%;
+        left: 30%;
       }
-      .fuck{
-        position: fixed;
-        top: 65%;
-        left:28%;
-        font-size: 45px;
-        font-family: futura;
-        font-weight: bolder;
-        color: yellow;
-        text-align: center;
-      }
-      .what{
-        position: fixed;
-        top: 41%;
-        left:11%;
-        font-size: 20px;
-        font-family: futura;
-        font-weight: 300;
-        color: black;
-        text-align: center;
-      }
-      .date{
-        position: fixed;
-        top: 8%;
-        left:45%;
-        font-size: 30px;
-        font-family: futura;
-        font-weight: bolder;
-        color: white;
-        text-align: center;
-      }
+      .rainbow{
+        position: relative;
+  width:100vw;
+  height:100vh;
+  background: -webkit-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet);
+  background: -moz-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
+  background: -o-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
+  background: -ms-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
+  background-repeat:repeat-x;
+
+  -webkit-animation:go 1s linear infinite;
+  -moz-animation:go 1s linear infinite;
+  -o-animation:go 1s linear infinite;
+  -ms-animation:go 1s linear infinite;
+  animation:go 1s linear infinite;
+
+  z-index: -100;
+  }
+
+  @-webkit-keyframes go{
+  0%{background-position:0;}
+  100%{background-position:200px 0;}
+
+  }
+  @-moz-keyframes go{
+  0%{background-position:0;}
+  50%{background-position:100px 0;}
+  100%{background-position:200px 0;}
+
+  }
+  @-o-keyframes go{
+  0%{background-position:0;}
+  100%{background-position:200px 0;}
+
+  }
+  @-ms-keyframes go{
+  0%{background-position:0;}
+  100%{background-position:200px 0;}
+
+  }
+  @keyframes go{
+  0%{background-position:0;}
+  100%{background-position:200px 0;}
+
+  }
+  .nayoung{
+    position: absolute;
+    top: 70%;
+    left: 42%;
+    width: 270px;
+  }
+
+  .p01{
+    position: fixed;
+    top:15%;
+    left: 3%;
+    font-size: 170px;
+    color: blue;
+    font-family: 'VT323', monospace;
+    font-weight: bold;
+    text-shadow: -5px 0 Fuchsia , 0 5px Fuchsia ,
+    5px 0 Fuchsia , 0 -5px Fuchsia ;
+    z-index: 2;
+  }
+  .p02{
+    position: fixed;
+    top: 1%;
+    left: 45%;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: normal;
+    color: yellow;
+    z-index: 2;
+  }
+  .p03{
+    position: fixed;
+    top: 79%;
+    left: 34%;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: cyan;
+    text-align: center;
+    z-index: 2;
+  }
     </style>
   </head>
   <body>
-    <p>INDESIGN<br> <b>FUCK YOU!!!!!</b></p>
-      <p class="fuck">But I love ZKM museum....<br>hmmmmmmmmmmmm.....</p>
-      <p class="what">INDESIGN destroyed all my goodness.</p>
-      <p class="date">2017.11.23</p>
-    <embed src="zkm.pdf" width="1440" height="720" type='application/pdf'>
+    <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=400 HEIGHT=300><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6595951%2Fss%3D2591160%2Fsl%3D0%3Fembedid%3D6fef5e9528b45fbd2bfa68271408f0ed&acc=6595951&bgcolor=0x&embedid=6fef5e9528b45fbd2bfa68271408f0ed"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6595951%2Fss%3D2591160%2Fsl%3D0%3Fembedid%3D6fef5e9528b45fbd2bfa68271408f0ed&acc=6595951&bgcolor=0x&embedid=6fef5e9528b45fbd2bfa68271408f0ed" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=600 HEIGHT=450 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
+
+    <div class="rainbow"></div>
+    <img class="nayoung" src="IMG_0775.JPG">
+    <p class="p01">CYBER ALCHOLE FRIEND</p>
+    <p class="p02">subtitle: 빨강 잘 썼어. 좋더라.</p>
+    <pre class="p03">
+      우리가 가장 외로움을 덜 느끼는 세대라는 말을 이해했다.
+      언제 어디서든 누구든 연결될 수 있는 존재.
+      by.나용.</pre>
   </body>
 </html>
