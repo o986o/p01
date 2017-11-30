@@ -1,0 +1,5 @@
+.active {}
+
+    .active .st0 {
+        fill: url(#img1);
+    }
