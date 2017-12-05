@@ -3,194 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>交換日記</title>
-    <!-- <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script> -->
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-    <style media="screen">
-    body{
-      margin: 0;
-      padding: 0;
-      background: rgb(0,255,0);
-      height: 1200vh;
-    }
-    .video1{
-      position: absolute;
-      width: auto;
-      height: 100vh;
-}
-
-    .video2{
-      position: absolute;
-}
-
-      .lau{
-        position: fixed;
-        left: 38%;
-        font-size: 18px;
-        color: white;
-        font-family: futura;
-        font-weight: bolder;
-        text-align: center;
-        line-height: 180%;
-        z-index: 2;
-      }
-      .german{
-        position: fixed;
-        top:-10%;
-        left: -10%;
-        font-size: 120px;
-        color: blue;
-        font-family: 'VT323', monospace;
-        font-weight: bolder;
-        text-shadow: -3px 0 Fuchsia , 0 3px Fuchsia ,
-        3px 0 Fuchsia , 0 -3px Fuchsia ;
-        text-align: center;
-        line-height: 120%;
-        z-index: 2;
-      }
-
-      .ek{
-        position: absolute;
-        top:90%;
-        left: 0%;
-        font-size: 110px;
-        color: rgb(0,255,0);
-        font-family: futura;
-        font-weight: bolder;
-        text-align: center;
-        line-height: 120%;
-        z-index: 3;
-      }
-    </style>
   </head>
+  <style media="screen">
+  body{
+    margin: 0;
+    padding: 0;
+  }
+  #grad1 {
+      position: fixed;
+      top: 0%;
+      width:100%;
+      height: 100%;
+      background: -webkit-repeating-radial-gradient(red, yellow 10%, green 10%); /* For Safari 5.1 to 6.0 */
+      background: -o-repeating-radial-gradient(red, yellow 10%, green 10%); /* For Opera 11.6 to 12.0 */
+      background: -moz-repeating-radial-gradient(red, yellow 10%, green 10%); /* For Firefox 3.6 to 15 */
+      background: repeating-radial-gradient(red, yellow 10%, green 10%); /* Standard syntax (must be last) */
+      z-index: -100;
+  }
+#VHSS{
+  position: fixed;
+  top: 15%;
+  left: 30%;
+}
+video{
+  position: absolute;
+  top: 26%;
+  left: 77%;
+  width: 300px;
+}
+  </style>
   <body>
-    <audio loop autoplay>
-      <source src="birth.mp3" type="audio/mpeg">
-    </audio>
+    <video width="720" height="auto" playsinline autoplay muted loop>
+      <source src="01.mp4">
+    </video>
+    <p>아...거지같아 방에 또 구멍생겼어...ㅜㅜ<br>
+    저건 또 언제 랜더걸고, 텍스쳐입히고 애니메이션 넣어....ㅜㅜㅜㅜㅜㅜㅜㅜㅜㅜ</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7jxhZxgCNhs" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 
-    <pre class="lau" style="top:-2%;">
-      03. Dez. 2017
-      LORENZ SCHMIDER BIRTHDAY</pre>
-
-      <pre class="lau" style="bottom:-2%;">
-        03. Dez. 2017
-        LORENZ SCHMIDER BIRTHDAY</pre>
-
-      <pre class="german">
-      Alles Gute zum Geburtstag
-      Ich liebe dich.
-      Ich mag dein
-      Geburtstagsprojekt sehr.</pre>
-      <pre class="ek">
-      HAPPY BIRTHDAY
-      I love you.
-      I really like your
-      birthday project.
-
-
-<i style="color:yellow">
-      생일축하해.
-      사랑해.
-      나는 너의 생일
-      프로젝트가 정말 좋아.</i>
-
-
-      HAPPY BIRTHDAY
-      I love you.
-      I really like your
-      birthday project.
-
-
-  <i style="color:cyan">
-      생일축하해.
-      사랑해.
-      나는 너의 생일
-      프로젝트가 정말 좋아.</i>
-
-
-      HAPPY BIRTHDAY
-      I love you.
-      I really like your
-      birthday project.
-
-
-  <i style="color:yellow">
-      생일축하해.
-      사랑해.
-      나는 너의 생일
-      프로젝트가 정말 좋아.</i>
-
-
-      HAPPY BIRTHDAY
-      I love you.
-      I really like your
-      birthday project.
-
-
-<i style="color:cyan">
-      생일축하해.
-      사랑해.
-      나는 너의 생일
-      프로젝트가 정말 좋아.</i>
-
-
-      HAPPY BIRTHDAY
-      I love you.
-      I really like your
-      birthday project.
-
-
-<i style="color:yellow">
-      생일축하해.
-      사랑해.
-      나는 너의 생일
-      프로젝트가 정말 좋아.</i>
-    </pre>
-
-    <video class="video1" style="top:0%; right:0%; transform:scaleX(-1);" playsinline autoplay muted loop> <source src="laurenz.mp4"> </video>
-    <video class="video1" style="top:0%; left:0%;" playsinline autoplay muted loop>
-      <source src="laurenz.mp4"> </video>
-
-    <video class="video1" style="top:100%; right:0%; transform:scaleX(-1);" playsinline autoplay muted loop> <source src="laurenz.mp4"> </video>
-    <video class="video1" style="top:100%; left:0%;" playsinline autoplay muted loop>
-    <source src="laurenz.mp4"> </video>
-
-    <video class="video1" style="top:200%; right:0%; transform:scaleX(-1);" playsinline autoplay muted loop> <source src="laurenz.mp4"> </video>
-    <video class="video1" style="top:200%; left:0%;" playsinline autoplay muted loop>
-    <source src="laurenz.mp4"> </video>
-
-    <video class="video1" style="top:200%; right:0%; transform:scaleX(-1);" playsinline autoplay muted loop> <source src="laurenz.mp4"> </video>
-    <video class="video1" style="top:200%; left:0%;" playsinline autoplay muted loop>
-    <source src="laurenz.mp4"> </video>
-
-    <img style="position: absolute; z-index:-1; width:199vw"src="01.jpg">
-
-    <video class="video2" style="top:330%; left:35%; width: 500px;" playsinline autoplay muted loop> <source src="01.mp4"> </video>
-
-      <img style="position: absolute; top: 305%; z-index:-1; width:80vw"src="01.jpg">
-
-    <video class="video2" style="top:400%; left:1%; width: 800px;" playsinline autoplay muted loop>
-    <source src="02.mp4"> </video>
-
-      <img style="position: absolute; top: 373%; right:-20%; z-index:-1; width:70vw"src="02.JPG">
-
-    <video class="video2" style="top:580%; left:30%; width: 860px;" playsinline autoplay muted loop>
-    <source src="03.mp4"> </video>
-
-        <img style="position: absolute; top: 470%; z-index:-2; width:100vw"src="03.jpg">
-
-    <video class="video2" style="top:755%; left:6%; width: 600px;" playsinline autoplay muted loop> <source src="04.mp4"> </video>
-        <video class="video2" style="top:670%; left:50%; width: 700px;" playsinline autoplay muted loop> <source src="04.mp4"> </video>
-
-          <img style="position: absolute; top: 680%; right: -20%; z-index:-1; width:100vw"src="04.JPG">
-
-    <video class="video2" style="top:835%; left:40%; width: 860px;" playsinline autoplay muted loop> <source src="05.mp4"> </video>
-
-          <img style="position: absolute; top: 850%; z-index:-2; width:90vw"src="05.JPG">
-
-          <video class="video1" style="top:1000%; left:15%;" playsinline autoplay muted loop> <source src="laurenz.mp4"> </video>
-          <video class="video1" style="top:1060%; right:25%; transform:scaleX(-1);" playsinline autoplay muted loop> <source src="laurenz.mp4"> </video>
-          <video class="video1" style="top:1135%; left:33%;" playsinline autoplay muted loop> <source src="laurenz.mp4"> </video>
-
+    <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=600 HEIGHT=450><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6595951%2Fss%3D2592554%2Fsl%3D0%3Fembedid%3Dade334bb2b07eae7dc4727b01577672e&acc=6595951&bgcolor=0x&embedid=ade334bb2b07eae7dc4727b01577672e"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6595951%2Fss%3D2592554%2Fsl%3D0%3Fembedid%3Dade334bb2b07eae7dc4727b01577672e&acc=6595951&bgcolor=0x&embedid=ade334bb2b07eae7dc4727b01577672e" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=600 HEIGHT=450 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
+      <div id="grad1"></div>
+      <img style="position: absolute; top: 65%; left: 70%; width:300px;" src="david-ex.gif">
   </body>
 </html>
