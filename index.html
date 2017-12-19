@@ -3,34 +3,98 @@
   <head>
     <meta charset="utf-8">
     <title>交換日記</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.20/p5.min.js" type="text/javascript"></script>
+    <script src="./javascript/p5.gif.js" type="text/javascript"></script>
+    <script src="sketch.js"></script>
+    <script type="text/javascript" src="./javascript/emoji.js"></script>
+
+
     <style media="screen">
-      p{
-        position: fixed;
-        top: 30%;
-        left:35%;
-        font-family: HeadLineA;
-        font-weight: bolder;
-        font-size: 60px;
-        text-align: center;
-        color: white;
+    body{
+      margin:0;
+      padding:0;
+    }
+    iframe{
+      top:700px;
+      left:0;
+      width: 1440px;
+      height: 700px;
+      z-index: -1;
+    }
+    #demo{
+      position: fixed;
+      left: 15%;
+      text-align: center;
+      font-size: 100px;
+      font-family: futura;
+      font-weight: bolder;
+      color: yellow;
       }
-      body{
-        background: yellow;
-      }
+
+    .info{
+    font-family: monospace;
+    position: absolute;
+    line-height: 20px;
+    font-size: 14px;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+    }
+    .error{
+      position: fixed;
+      font-size: 50px;
+      font-family: futura;
+      font-weight: bolder;
+      color: red;
+    }
+    .test{
+      position: fixed;
+      top: 33%;
+      left:25%;
+      font-size: 80px;
+      font-family: futura;
+      font-weight: bolder;
+      color: lavender;
+    }
     </style>
-  </head>
-  <body>
-    <p>어떤 도희가 제일 좋나요?<br>좌측 상단부터<br>도희1,도희2,도희3,도희4,도희5,도희6</p>
-  <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=450 HEIGHT=338><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594881%2Fsl%3D0%3Fembedid%3D0bb76437b16b1eae7820da8ce28b7fae&acc=6618104&bgcolor=0x&embedid=0bb76437b16b1eae7820da8ce28b7fae"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594881%2Fsl%3D0%3Fembedid%3D0bb76437b16b1eae7820da8ce28b7fae&acc=6618104&bgcolor=0x&embedid=0bb76437b16b1eae7820da8ce28b7fae" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=450 HEIGHT=338 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
 
-  <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=450 HEIGHT=338><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594885%2Fsl%3D0%3Fembedid%3D26208f5261387bdb375029baa786b700&acc=6618104&bgcolor=0x&embedid=26208f5261387bdb375029baa786b700"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594885%2Fsl%3D0%3Fembedid%3D26208f5261387bdb375029baa786b700&acc=6618104&bgcolor=0x&embedid=26208f5261387bdb375029baa786b700" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=450 HEIGHT=338 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
+    </head>
 
-  <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=450 HEIGHT=338><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594886%2Fsl%3D0%3Fembedid%3De69b738c2024c02189d793a10acfe2b6&acc=6618104&bgcolor=0x&embedid=e69b738c2024c02189d793a10acfe2b6"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594886%2Fsl%3D0%3Fembedid%3De69b738c2024c02189d793a10acfe2b6&acc=6618104&bgcolor=0x&embedid=e69b738c2024c02189d793a10acfe2b6" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=450 HEIGHT=338 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
+    <body>
+      <p class="error">
+        error/error/error/error/error/error/error/error/error/<br><br><br>
+        error/error/error/error/error/error/error/error/error/<br><br><br>
+        error/error/error/error/error/error/error/error/error/<br><br><br>
+      error/error/error/error/error/error/error/error/error/</p>
 
-  <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=450 HEIGHT=338><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594891%2Fsl%3D0%3Fembedid%3D79d8a821605eb593bbfc72b8abca76f6&acc=6618104&bgcolor=0x&embedid=79d8a821605eb593bbfc72b8abca76f6"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594891%2Fsl%3D0%3Fembedid%3D79d8a821605eb593bbfc72b8abca76f6&acc=6618104&bgcolor=0x&embedid=79d8a821605eb593bbfc72b8abca76f6" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=450 HEIGHT=338 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
+      <p class="test">test2.test2.test2</p>
+      <!-- mousecursor event -->
+      <div class="info"></div>
+      <!-- d-day -->
+      <p id="demo"></p>
+      <script>
+      var countDownDate = new Date("Sep 5, 2018 15:37:25").getTime();
+      var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+          if (distance < 0) {
+              clearInterval(x);
+              document.getElementById("demo").innerHTML = "EXPIRED";
+          }
+      }, 1000);
+      </script>
 
-  <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=450 HEIGHT=338><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594888%2Fsl%3D0%3Fembedid%3Db6fb3154293252988f579d5d9d01061a&acc=6618104&bgcolor=0x&embedid=b6fb3154293252988f579d5d9d01061a"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594888%2Fsl%3D0%3Fembedid%3Db6fb3154293252988f579d5d9d01061a&acc=6618104&bgcolor=0x&embedid=b6fb3154293252988f579d5d9d01061a" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=450 HEIGHT=338 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
+      <!-- whiteroom -->
+      <iframe id="roomVid" src="https://www.youtube.com/embed/7jxhZxgCNhs?autoplay=1&loop=1&rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
-  <OBJECT id="VHSS" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,115,0" WIDTH=450 HEIGHT=338><PARAM NAME="movie" VALUE="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594892%2Fsl%3D0%3Fembedid%3D601f1f132971392a8b6892b8016f1e9c&acc=6618104&bgcolor=0x&embedid=601f1f132971392a8b6892b8016f1e9c"><PARAM NAME=quality VALUE=high><param name="allowScriptAccess" value="always"><PARAM NAME=scale VALUE=noborder><PARAM NAME=bgcolor VALUE="transparent"><PARAM NAME="wmode" VALUE="transparent"><EMBED src="http://vhss-d.oddcast.com/vhss_v5.swf?doc=http%3A%2F%2Fvhss-d.oddcast.com%2Fphp%2FplayScene%2Facc%3D6618104%2Fss%3D2594892%2Fsl%3D0%3Fembedid%3D601f1f132971392a8b6892b8016f1e9c&acc=6618104&bgcolor=0x&embedid=601f1f132971392a8b6892b8016f1e9c" swLiveConnect=true NAME="VHSS" quality=high allowscriptaccess="always" scale=noborder wmode="transparent" WIDTH=450 HEIGHT=338 TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></EMBED></OBJECT>
-  </body>
-</html>
+
+
+    </body>
+
+    </html>
