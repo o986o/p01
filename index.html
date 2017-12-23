@@ -1,26 +1,80 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<title>交換日記</title>
 
-  <head>
-    <meta charset="utf-8">
-    <title>交換日記</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+body{
+  background: magenta;
+}
+#container {
+    margin: 0px auto;
+    width: 500px;
+    height: 375px;
+    border: 10px #333 solid;
+}
+#videoElement {
+    width: 500px;
+    height: 375px;
+    background-color: #666;
+}
+.kr{
+  position: absolute;
+  top: 60%;
+  left: 38%;
+  font-family: serif;
+  font-weight: bolder;
+  font-size: 15px;
+  text-align: center;
+  color: blue;
+}
+.be{
+  position: absolute;
+  top: 65%;
+  left: 15%;
+  font-family: futura;
+  font-weight: bolder;
+  font-size: 50px;
+  text-align: center;
+  color: pink;
+}
+</style>
+</head>
 
-    <!-- 스크립트 배치 순서
-    1.jquery
-    2.jquery plug-in
-    3.script -->
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.waypoints.js"></script>
+<body>
+  <div class="webcam">
+<div id="container">
+    <video autoplay="true" id="videoElement"></video>
+    </div>
+</div>
 
-    <script type="text/javascript" src="js/script.js"></script>
-  </head>
+<p class="kr">어느 순간 내가 너무 늙어버렸구나라는 생각이 든다.<br> 7살 때의 내가 생각나면서.</p>
+<p class="be">BEAUTIFUL MIRROR MIRROR BEAUTIFUL</p>
 
-  <body>
+<script>
+var video = document.querySelector("#videoElement");
 
-    <div class="box"><img src="beer.png" style="width:500px;"><p>Saufen</p></div>
-    <p>Saufen</p>
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
 
-  </body>
+if (navigator.getUserMedia) {
+   navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
 
+function handleVideo(stream) {
+   video.src = window.URL.createObjectURL(stream);
+}
+
+function videoError(e) {
+   // do something
+}
+</script>
+
+
+</div>
+</body>
 </html>
