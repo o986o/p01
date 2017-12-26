@@ -1,80 +1,56 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta content="stuff, to, help, search, engines, not" name="keywords">
-<meta content="What this page is about." name="description">
-<meta content="Display Webcam Stream" name="title">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<title>交換日記</title>
+<html lang="en" >
 
-<style>
-body{
-  background: magenta;
-}
-#container {
-    margin: 0px auto;
-    width: 500px;
-    height: 375px;
-    border: 10px #333 solid;
-}
-#videoElement {
-    width: 500px;
-    height: 375px;
-    background-color: #666;
-}
-.kr{
-  position: absolute;
-  top: 60%;
-  left: 38%;
-  font-family: serif;
-  font-weight: bolder;
-  font-size: 15px;
-  text-align: center;
-  color: blue;
-}
-.be{
-  position: absolute;
-  top: 65%;
-  left: 15%;
-  font-family: futura;
-  font-weight: bolder;
-  font-size: 50px;
-  text-align: center;
-  color: pink;
-}
+<head>
+  <meta charset="UTF-8">
+  <title>交換日記</title>
+
+
+
+      <link rel="stylesheet" href="css/style.css">
+
+<style media="screen">
+  p{
+    position: absolute;
+    color:red;
+    font-family: AppleMyungjo;
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  img{
+    position: absolute;
+  }
 </style>
+
 </head>
 
 <body>
-  <div class="webcam">
-<div id="container">
-    <video autoplay="true" id="videoElement"></video>
-    </div>
-</div>
+  <p>뭐가뭔지 하나도 모르겠다! 으악!<br>
+  이미지라도 바꿀 수 있었으면,,,<br>
+  webgl고수님의 도움이 시급합니다.<br>
+  이것은 제가 만든 것이 아닌<br>
+  코드를 긁어 온 것입니다. ㅜㅜ parameter수치만 깨작거렸어요.
+  <br><br>
+  분명 이 부분 수정하면 될텐데...
+  <br><br><br><br><br><br>
+  그런데 진짜 배고프다,,,
+  </p>
 
-<p class="kr">어느 순간 내가 너무 늙어버렸구나라는 생각이 든다.<br> 7살 때의 내가 생각나면서.</p>
-<p class="be">BEAUTIFUL MIRROR MIRROR BEAUTIFUL</p>
-
-<script>
-var video = document.querySelector("#videoElement");
-
-navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-
-if (navigator.getUserMedia) {
-   navigator.getUserMedia({video: true}, handleVideo, videoError);
-}
-
-function handleVideo(stream) {
-   video.src = window.URL.createObjectURL(stream);
-}
-
-function videoError(e) {
-   // do something
-}
-</script>
+  <img src="01.png" style="width: 800px; top: 45%;">
+  <img src="02.png" style="width: 400px; top: 0%; left: 60%;">
 
 
-</div>
+<canvas id="scene"></canvas>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.5.1/dat.gui.min.js'></script>
+
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
 </body>
+
 </html>
