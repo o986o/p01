@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>交換日記</title>
+    <link rel="icon" type="image/png" href="b.png">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  </head>
+  <style media="screen">
+  html {height:100%;}
+    body{
+      margin:0;
+      padding: 0;
+      background: black;
+    }
+    ul{
+      position: absolute;
+      left: -2%;
+      top: -1%;
+      font-size: 0.9em;
+    }
+
+  #tooltip1 { position: relative; }
+  #tooltip1 a span { display: none; color: red;}
+  #tooltip1 a:hover span { display: block;}
+  #image{
+    position: absolute;
+    width: 80px;
+    height: 50px;
+    background-size: cover, contain;
+    left: 80px;
+    top: -2px;
+    padding 0 5px;
+    border: 2px solid white;
+  }
+
+  #img1{
+    position: fixed;
+    right: -2%;
+    bottom: 2%;
+    height: 30%;
+  }
+  #flag{
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(0,255,0);
+  }
+  #t{
+    position: fixed;
+    top: -6%;
+    left: 29%;
+    width: 47%;
+    z-index: -1;
+  }
+
+  #t1{
+    position: fixed;
+    top: 40%;
+    left: 42%;
+    width: 49px;
+  }
+  #grad1{
+    height: 10px;
+    background: black;
+    background: linear-gradient(blue, black, blue);
+    margin-top: 30px;
+    z-index: -1;
+  }
+  #grad2 {
+    height: 5px;
+    background: black;
+    background: linear-gradient(-90deg, magenta, black, magenta);
+    z-index: -2;
+}
+a:link, a:visited {
+    color: yellow;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+a:hover, a:active {
+    background-color: black;
+}
+a:hover{
+color: blue;
+}
+#ground{
+  position: fixed;
+  top: 87%;
+  height: 13%;
+  width: 100%;
+  background: green;
+  z-index: -3;
+}
+#ground2{
+  position: fixed;
+  top: 90%;
+  height: 10%;
+  width: 100%;
+  background: #663300;
+  z-index: -3;
+}
+  </style>
+  <body>
+    <pre id = flag>🇰🇷   🇩🇪</pre>
+    <img id=t src="p.gif">
+    <div id="ground"></div>
+    <div id="ground2"></div>
+
+    <div id="grad1"></div><div id="grad1"></div><div id="grad1"></div><div id="grad1"></div>
+    <div id="grad1"></div><div id="grad1"></div><div id="grad1"></div><div id="grad1"></div><div id="grad1"></div>
+    <div id="grad1"></div><div id="grad1"></div><div id="grad1"></div><div id="grad1"></div><div id="grad1"></div>
+    <div id="grad1"></div><div id="grad1"></div><div id="grad1"></div><div id="grad1"></div><div id="grad1"></div>
+    <div id="grad1"></div><div id="grad1"></div><div id="grad1"></div>
+    </div>
+    <ul style="list-style-type:none">
+      <li id="tooltip1"><a href="website/2017.9.30/index.html">2017.09.30<span><img id="image" src="screenshot/01.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.01/index.html">2017.10.01<span><img id="image" src="screenshot/02.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.02/index.html">2017.10.02<span><img id="image" src="screenshot/03.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.3/index.html">2017.10.03<span><img id="image" src="screenshot/04.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.04/index.html">2017.10.04<span><img id="image" src="screenshot/05.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.05/index.html">2017.10.05<span><img id="image" src="screenshot/06.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.7/index.html">2017.10.07<span><img id="image" src="screenshot/07.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.10/index.html">2017.10.10<span><img id="image" src="screenshot/08.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.11/index.html">2017.10.11<span><img id="image" src="screenshot/09.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.12/index.html">2017.10.12<span><img id="image" src="screenshot/10.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.13/index.html">2017.10.13<span><img id="image" src="screenshot/11.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.15/index.html">2017.10.15<span><img id="image" src="screenshot/12.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.17/index.html">2017.10.17<span><img id="image" src="screenshot/13.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.18/index.html">2017.10.18<span><img id="image" src="screenshot/14.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.19/index.html">2017.10.19<span><img id="image" src="screenshot/15.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.21/index.html">2017.10.21<span><img id="image" src="screenshot/16.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.23/index.html">2017.10.23<span><img id="image" src="screenshot/17.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.24/index.html">2017.10.24<span><img id="image" src="screenshot/18.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.10.30/index.html">2017.10.30<span><img id="image" src="screenshot/19.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.01/index.html">2017.11.01<span><img id="image" src="screenshot/20.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.02/index.html">2017.11.02<span><img id="image" src="screenshot/21.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.04/index.html">2017.11.04<span><img id="image" src="screenshot/22.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.06/index.html">2017.11.06<span><img id="image" src="screenshot/23.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.11/index.html">2017.11.11<span><img id="image" src="screenshot/24.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.15/index.html">2017.11.15<span><img id="image" src="screenshot/25.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.16/index.html">2017.11.16<span><img id="image" src="screenshot/26.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.18/index.html">2017.11.18<span><img id="image" src="screenshot/27.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.20/index.html">2017.11.20<span><img id="image" src="screenshot/28.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.21/index.html">2017.11.21<span><img id="image" src="screenshot/29.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.22/index.html">2017.11.22<span><img id="image" src="screenshot/30.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.26/index.html">2017.11.26<span><img id="image" src="screenshot/31.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.28/index.html">2017.11.28<span><img id="image" src="screenshot/32.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.29/index.html">2017.11.29<span><img id="image" src="screenshot/33.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.11.30/index.html">2017.11.30<span><img id="image" src="screenshot/34.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.03/index.html">2017.12.03<span><img id="image" src="screenshot/35.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.04/index.html">2017.12.04<span><img id="image" src="screenshot/36.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.05/index.html">2017.12.05<span><img id="image" src="screenshot/37.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.11/index.html">2017.12.11<span><img id="image" src="screenshot/38.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.17/index.html">2017.12.17<span><img id="image" src="screenshot/39.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.18/index.html">2017.12.18<span><img id="image" src="screenshot/40.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.20/index.html">2017.12.20<span><img id="image" src="screenshot/41.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.21/index.html">2017.12.21<span><img id="image" src="screenshot/42.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.23/index.html">2017.12.23<span><img id="image" src="screenshot/43.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.26/index.html">2017.12.26<span><img id="image" src="screenshot/44.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2017.12.27/index.html">2018.12.27<span><img id="image" src="screenshot/45.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2018.01.09/index.html">2018.01.09<span><img id="image" src="screenshot/46.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2018.01.10/index.html">2018.01.10<span><img id="image" src="screenshot/47.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2018.01.15/index.html">2018.01.15<span><img id="image" src="screenshot/48.jpg"></span></a></li>
+      <li id="tooltip1"><a href="website/2018.01.16/index.html">2018.01.16<span><img id="image" src="screenshot/49.jpg"></span></a></li>
+  </ul>
+
+    <a href="walking.html"><img id="img1" src="walking.gif"></a>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+    <script>
+
+    $(window).scroll(function (event) {
+        var scroll = $(window).scrollTop();
+        console.log(scroll);
+    });
+
+    </script>
+
+  </body>
+</html>

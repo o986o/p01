@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>交換日記</title>
+  <style>
+  #a {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #ffff00;
+  position :relative;
+  -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: mymove 5s infinite;
+  float:right;
+  margin:2px;
+  z-index: 2;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+  0%   {top: 600px;}
+  50%   {top: 0px;}
+  100% {top: 600px;}
+}
+
+html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+    background-color:#004d00;
+}
+#content{
+    background-color: transparent;
+    background-image:       linear-gradient(0deg, transparent 24%, grey 25%, grey 26%, transparent 27%, transparent 74%, grey 75%, grey 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, grey 25%, grey 26%, transparent 27%, transparent 74%, grey 75%,grey 76%, transparent 77%, transparent);
+  height:100%;
+  background-size:50px 50px;
+}
+#demo{
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: futura;
+  font-weight: bold;
+  color: #990000;
+  text-align: center;
+  font-size: 140px;
+  z-index: 1;
+}
+img{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+p{
+  position: fixed;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: futura;
+  font-weight: 100;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  z-index: 3;
+}
+
+  </style>
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Feb 28, 2018 16:20:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+      // Get todays date and time
+      var now = new Date().getTime();
+
+      // Find the distance between now an the count down date
+      var distance = countDownDate - now;
+
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+      // If the count down is over, write some text
+      if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "EXPIRED";
+      }
+  }, 1000);
+  </script>
+</head>
+
+<body>
+<p id="demo"></p>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+  <div id="a"></div>
+
+  <div id="content"></div>
+
+  <p>stutututututututututututututututugart</p>
+
+<img src="IMG_8033.jpg" style="width:100px; height:100px;">
+</body>
+
+</html>

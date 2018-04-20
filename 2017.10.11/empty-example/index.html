@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>交換日記</title>
+  <script src="../p5.min.js"></script>
+  <script src="../addons/p5.dom.min.js"></script>
+  <script src="../addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+  <style media="screen">
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    #myDIV {
+      position: absolute;
+      top: 200px;
+      color: white;
+      border: 2px solid yellow;
+      font-family: futura;
+      /* Firefox */
+      -moz-column-width: 300px;
+      /* Chrome, Safari, Opera */
+      -webkit-column-width: 300px;
+      -webkit-animation: mymove 5s infinite;
+      /* Standard syntax */
+      column-width: 300px;
+      animation: mymove 5s infinite;
+    }
+    /* Chrome, Safari, Opera */
+
+    @-webkit-keyframes mymove {
+      50% {
+        -webkit-column-width: 100px;
+      }
+    }
+    img{
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 100;
+      width:100px;
+      height:100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myDIV">
+    html5 - use canvas, more web app not a website stuff p5.js difference between processing >idea of semester focus more how to work with colors interactive stuff drawing directly. dom library. sublime text 다운로드 할 것. innerwidth(현재 열려져 있는 웹창을 기준으로 사이즈를 정하는)
+    https://p5js.org/ 웹사이트에서 코드를 따라해볼 것. 웹브라우져를 디버깅하는 방법 firefox브라우져? 브라우져 간의 차이는? setup 1번만 실행되는 것. draw setup and draw function is pretty similar. but setup excute the action. 개발자 도구 - elements, console, sources 디버깅 하는 방법 console에 텍스트 남기는 것. P5 js 레퍼런스를
+    참고하여서 작업할 것. setup and draw setup은 시작점을 말하는 것임. javascript vs java java- variable o, mathematical stuff o, something mathematical operation possible. javascript- variable globally, 맨앞으로 빼게 되면 모든 function 값에 적용시킬 수 있다. 이렇게 하는 이유는 값 하나를 계속 조절해서 원하는
+    재미있는 작용을 만들 수 있기 때문이다. 팀으로 작업을 할 때는 globally 기능을 쓰지 않는 것이 좋다. 왜냐하면 이름이 겹치게 되면 매우 이상하게 코드가 섞일 수 있기 때문이다. css display - css를 이용해서 무언가를 만드는 것은 매우 쉽고 유용하다. rgb값을 두 개만 적을 때, 3개만 적을 때, 4개만 적을 때 noStroke(); fill(255, 60); directly하게 어떠한 것을 보여주는 것은 아니다. noStroke();?
+    reference - environment (screen display) brackets 괄호 how to use variables, if code, greets side == 참 != 거짓 || 두개의 if구문을 사용할 때 사용하는 것. or이라는 의미를 가지고 있음 both are true. && 두개의 조건이 사실일 때만 적용되는 부호이다. for loop 변수라고 지정, how log it will loop - x가 grid count
+    x 보다 작을 때 계속한다., 사실일 때 x에 +1을 한다. for(변수를 정의, define break 언제 멈출 것이지 정의할 것, define change of working variable) how to work with colors what do you want to work javascript get scroll
+  </div>
+  <img src="IMG_8530.jpg">
+</body>
+
+</html>

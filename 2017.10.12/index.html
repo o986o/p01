@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>交換日記</title>
+      <style media="screen">
+      body{
+        background: yellow;
+      }
+      .circle {
+        position: absolute;
+        top: 230px;
+        left: 300px;
+        width: 300px;
+        height: 300px;
+        -moz-border-radius: 300px;
+        -webkit-border-radius: 300px;
+        border-radius: 300px;
+        background: rgb(255, 0, 102, 0.5);
+        border: 2px solid red;
+        background-color: blue;
+        -webkit-animation: mymove 5s infinite;
+        /* Chrome, Safari, Opera */
+        animation: mymove 5s infinite;
+        animation-name: flash;
+        z-index: 100;
+
+      }
+      @-webkit-keyframes mymove {
+        50% {
+          box-shadow: 25px 23px 40px blue;
+        }
+      }
+
+      @keyframes flash {
+        from, 50%, to {
+          opacity: 1;
+        }
+
+        25%, 75% {
+          opacity: 0;
+        }
+      }
+
+      .circle1 {
+        position: absolute;
+        top: 230px;
+        left: 300px;
+        width: 300px;
+        height: 300px;
+        -moz-border-radius: 300px;
+        -webkit-border-radius: 300px;
+        border-radius: 300px;
+        background: rgb(255, 0, 102, 0.5);
+        border: 2px solid red;
+      }
+
+      #myDIV {
+    border: 1px solid black;
+    /* Firefox */
+    -moz-column-count: 3;
+    -moz-column-rule: 1px outset red;
+    /* Chrome, Safari, Opera */
+    -webkit-column-count: 3;
+    -webkit-column-rule: 1px outset red;
+    -webkit-animation: mymove 5s infinite;
+    /* Standard syntax */
+    column-count: 3;
+    column-rule: 1pxpx outset red;
+    animation: mymove 5s infinite;
+    color: blue;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {-webkit-column-rule-width: 200px;}
+}
+
+#myDIV2 {
+border: 1px solid black;
+/* Firefox */
+-moz-column-count: 5;
+-moz-column-rule: 1px outset red;
+/* Chrome, Safari, Opera */
+-webkit-column-count: 5;
+-webkit-column-rule: 10px outset red;
+-webkit-animation: mymove 5s infinite;
+/* Standard syntax */
+column-count: 5;
+column-rule: 10px outset blue;
+animation: mymove1 2.5s infinite;
+color: red;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove1 {
+50% {-webkit-column-rule-width: 600px;}
+}
+p{
+  position: fixed;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 110px;
+  font-family: HeadLineA;
+  z-index: 200;
+}
+      </style>
+  </head>
+  <body>
+    <div class="circle">
+    </div>
+    <div class="circle" style="left:900px; box-shadow: pink;">
+    </div>
+    <div class="circle1" style="background:red;">
+    </div>
+    <div class="circle1" style="left:900px; box-shadow: pink;">
+    </div>
+    <div id="myDIV">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+</div>
+
+<div id="myDIV2" style="position:fixed; bottom:5px">
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+</div>
+<p>배고파서 죽음.</p>
+<p style="position:absolute; top:3px; font-size:20px;">떡볶이 먹고 싶어...</p>
+<p style="position:absolute; top:650px; font-size:20px;">떡볶이 먹고 싶어...</p>
+  </body>
+</html>

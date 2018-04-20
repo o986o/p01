@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>交換日記</title>
+      <meta charset="utf-8">
+  <script src="../p5.min.js"></script>
+  <script src="../addons/p5.dom.min.js"></script>
+  <script src="../addons/p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+  <link rel="stylesheet" href="animate.css">
+  <style>
+      body {
+      position: fixed;
+      padding: 0;
+      margin: 0;
+    }
+
+    .a {
+      position: absolute;
+      border: 3px solid black;
+      width: 100px;
+      height: 100px;
+    }
+
+    img {
+      position: fixed;
+      top: 100px;
+      left: 650px;
+      width: 500px;
+      height: 500px;
+    }
+
+    .box1{
+      position: absolute;
+      top: 100px;
+      left: 650px;
+      width: 500px;
+      height: 500px;
+    }
+
+    .box2{
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 240px;
+      height: 240px;
+      background: black;
+      z-index: 0;
+    }
+
+    .b {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: futura;
+      font-size: 60px;
+      font-weight: bold;
+      color: blue;
+      text-align: center;
+    }
+
+    #main {
+    position: fixed;
+    top: 325px;
+    left: 1100px;
+    width: 350px;
+    height: 200px;
+    transform: rotate(270deg);
+    display: flex;
+}
+
+#main div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 500px;
+}
+
+#myBlueDiv {
+    animation: mymove3 3s infinite;
+    -webkit-animation: mymove3 3s infinite; /* Chrome, Safari, Opera */
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove3 {
+    50% {flex-basis: 10px;}
+}
+
+#main1 {
+position: fixed;
+top: 175px;
+left: 1100px;
+width: 350px;
+height: 200px;
+opacity: 0.6;
+transform: rotate(-270deg);
+display: flex;
+z-index: 1;
+}
+
+#main1 div {
+flex-grow: 0;
+flex-shrink: 0;
+flex-basis: 500px;
+}
+
+#myBlueDiv {
+animation: mymove 3s infinite;
+-webkit-animation: mymove 3s infinite; /* Chrome, Safari, Opera */
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+50% {flex-basis: 10px;}
+}
+
+#myDI {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+    width: 500px;
+    height: 500px;
+    background-color: black;
+    -webkit-animation: mymove1 3s infinite; /* Chrome, Safari, Opera */
+    animation: mymove1 3s infinite;
+    clip: rect(0,500px,500px,0);
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove1 {
+    50% {clip: rect(0,50px,50px,0);}
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="a" style="top: 100px; left:100px;"></div>
+  <div class="a" style="top: 100px; left:300px;"></div>
+  <div class="a" style="top: 100px; left:500px;"></div>
+
+  <div class="a" style="top: 300px; left:100px;"></div>
+  <div class="a" style="top: 300px; left:300px;"></div>
+  <div class="a" style="top: 300px; left:500px;"></div>
+
+  <div class="a" style="top: 500px; left:100px;"></div>
+  <div class="a" style="top: 500px; left:300px;"></div>
+  <div class="a" style="top: 500px; left:500px;"></div>
+
+  <img src="IMG_8668.JPG">
+  <div class="box1">
+    <div class="box2"></div>
+  </div>
+
+
+
+  <div class="animated infinite flash">
+  <p class="b">슈타트비브리오테크<br>StadtBibliothek</p>
+  </div>
+  <div id="main">
+    <div style="background-color:black;" id="myBlueDiv"></div>
+  </div>
+  <div id="main1">
+    <div style="background-color:blue;" id="myBlueDiv"></div>
+  </div>
+  <div id="myDI">
+  </div>
+
+</body>
+
+</html>

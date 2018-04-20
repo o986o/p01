@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>交換日記</title>
+  <style>
+    #myDIV {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30%;
+      height: auto;
+      background-color: #ffe100;
+      border: 1px solid red;
+      color: white;
+      bottom: 0px;
+        z-index: 2;
+      -webkit-animation: mymove 7s infinite;
+      /* Chrome, Safari, Opera */
+      animation: mymove 5s infinite;
+    }
+    /* Chrome, Safari, Opera */
+
+    @-webkit-keyframes mymove {
+      50% {
+        bottom: 600px;
+      }
+    }
+    #green{
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 50%;
+      background-color: green;
+      bottom: 0px;
+      z-index: 1;
+    }
+    h1 {
+      text-align: center;
+      color: black;
+      font-family: futura;
+      font-weight: light;
+      font-size: 5px;
+      margin-top: -17px;
+    }
+
+    body {
+      background-color: grey;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="myDIV">
+    <h1>태양</h1>
+  </div>
+  <div id="green"></div>
+</body>
+
+</html>

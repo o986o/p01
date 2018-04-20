@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>交換日記</title>
+  <link rel="stylesheet" href="animate.css">
+  <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    <style media="screen">
+    body{
+      margin: 0;
+      padding: 0;
+      background-color: yellow;
+    }
+    .rainbow{
+      position: relative;
+width:20vw;
+height:100vh;
+background: -webkit-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet);
+background: -moz-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
+background: -o-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
+background: -ms-linear-gradient(left, red,orange,yellow,green,blue,indigo,violet,red);
+background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,red);
+background-repeat:repeat-x;
+
+-webkit-animation:go 1s linear infinite;
+-moz-animation:go 1s linear infinite;
+-o-animation:go 1s linear infinite;
+-ms-animation:go 1s linear infinite;
+animation:go 1s linear infinite;
+}
+
+@-webkit-keyframes go{
+0%{background-position:0;}
+100%{background-position:200px 0;}
+
+}
+@-moz-keyframes go{
+0%{background-position:0;}
+50%{background-position:100px 0;}
+100%{background-position:200px 0;}
+
+}
+@-o-keyframes go{
+0%{background-position:0;}
+100%{background-position:200px 0;}
+
+}
+@-ms-keyframes go{
+0%{background-position:0;}
+100%{background-position:200px 0;}
+
+}
+@keyframes go{
+0%{background-position:0;}
+100%{background-position:200px 0;}
+
+}
+
+.tired2 {
+  animation-name: fadeInDownBig;
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -350px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.image1{
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  width: 150px;
+  height: auto;
+}
+.image2{
+  position: absolute;
+  top: 53%;
+  left: 64%;
+  width: 400px;
+  height: auto;
+}
+.video1{
+  position: absolute;
+  top: -400px;
+  left: 510px;
+  width: 200px;
+  height: auto;
+}
+#text {
+-webkit-animation: a1 7s infinite; /* Chrome, Safari, Opera */
+animation: a1 7s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes a1 {
+50% {font: 320px bolder;}
+}
+
+.ani1{
+  position: absolute;
+  top: -15px;
+  left: 8px;
+  z-index: 3;
+  color: red;
+  font-family: didot;
+  font-weight: bolder;
+  text-shadow: -2px 0 black, 0 2px black,
+  2px 0 black, 0 -2px black;
+}
+.text2{
+  position: absolute;
+  top: -140px;
+  left: 40%;
+  font-size: 118px;
+  font-family: 'Playball', cursive;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="rainbow"></div>
+    <div class="hello">
+    <img class="image1" src="IMG_9352.png">
+    <img class="image2" src="screen.png">
+<div class="animated infinite tired2">
+    <video  class ="video1" poster="01.MOV" id="bgvid" playsinline autoplay muted loop>
+  <source src="01.MOV" type="video/webm">
+  <source src="01.MOV" type="video/mov">
+  </video>
+</div>
+</div>
+<div id="text">
+<p class="ani1">Salud~!</p>
+</div>
+<p class="text2">tkfkdgody. tkfkdgody. wjdakf tkfkdgo. wjdakf wjdakf sork sjfmf aksgdl tkfkdgo.</p>
+<video  class ="video1" style="width:400px; position: absolute; left: 50%; top: 10%;" poster="Glücklicher Koch.mp4" id="bgvid" playsinline autoplay muted loop>
+<source src="Glücklicher Koch.mp4" type="video/webm">
+<source src="Glücklicher Koch.mp4" type="video/mov">
+</video>
+  </body>
+</html>
